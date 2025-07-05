@@ -1,114 +1,110 @@
-💸 Personal Finance Visualizer
-A responsive web application for tracking personal finances, managing budgets, and visualizing expenses with modern charts.
+# 💸 Personal Finance Visualizer
 
-Stack:
-✅ Next.js 15 (App Router)
-✅ React with Shadcn/ui for modern UI components
-✅ MongoDB (via Mongoose) for persistent storage
-✅ Recharts for interactive charts
-✅ Tailwind CSS for responsive design
+A responsive web app to track personal finances, manage budgets, and visualize expenses with modern charts.
 
-🚀 Features
-✅ Stage 1: Transaction Tracking
-✔️ Add, edit, delete transactions (amount, date, description, category)
-✔️ View all transactions in a clean, responsive list
-✔️ Monthly expenses bar chart
+---
 
-✅ Stage 2: Categories & Dashboard
-✔️ Predefined categories for transactions
-✔️ Category-wise pie chart for expense breakdown
-✔️ Dashboard summary: Total expenses, category insights, latest transactions
+## 🚀 Tech Stack
 
-✅ Stage 3: Budgeting & Insights
-✔️ Set monthly budgets per category
-✔️ Budget vs Actual comparison chart
-✔️ Simple spending insights
+- **Next.js 15 (App Router)**
+- **React + Shadcn/ui**
+- **MongoDB + Mongoose**
+- **Recharts** for charts
+- **Tailwind CSS** for responsive design
 
-📂 Project Structure
-bash
-Copy
-Edit
-├── app/
-│   ├── page.tsx               # Main dashboard layout
-│   ├── api/
-│   │   ├── transactions/route.ts    # Transaction API (CRUD)
-│   │   ├── budgets/route.ts         # Budget API
-├── components/
-│   ├── TransactionForm.tsx
-│   ├── TransactionList.tsx
-│   ├── MonthlyExpensesChart.tsx
-│   ├── CategoryPieChart.tsx
-│   ├── SummaryCards.tsx
-│   ├── BudgetForm.tsx
-│   ├── BudgetComparisonChart.tsx
-├── lib/db.ts                   # MongoDB connection
-├── models/Transaction.ts       # Transaction schema
-├── models/Budget.ts            # Budget schema
-├── utils/
-│   ├── dateHelpers.ts
-│   ├── categoryHelpers.ts
-├── styles/globals.css
-└── .env.local                  # MongoDB credentials
-🛠️ Setup & Run
-Clone the Repository
+---
 
-bash
-Copy
-Edit
-git clone [your-repo-url]
-cd [project-folder]
-Install Dependencies
+## ✨ Features
 
-bash
-Copy
-Edit
+✅ Add, edit, delete transactions  
+✅ Predefined categories with Pie Chart  
+✅ Monthly expenses bar chart  
+✅ Dashboard summary: total expenses, category breakdown, recent transactions  
+✅ Set monthly budgets & compare with actual spending  
+✅ Simple, clean, responsive UI  
+
+---
+
+## 📂 Project Structure
+
+app/
+
+  ├─ page.tsx # Main dashboard
+
+  └─ api/
+
+  ├─ transactions/route.ts
+
+  └─ budgets/route.ts
+
+
+components/
+
+  ├─ TransactionForm.tsx
+
+  ├─ TransactionList.tsx
+
+  ├─ MonthlyExpensesChart.tsx
+
+  ├─ CategoryPieChart.tsx
+
+  ├─ SummaryCards.tsx
+
+  ├─ BudgetForm.tsx
+
+  └─ BudgetComparisonChart.tsx
+
+
+lib/db.ts # MongoDB connection
+
+models/Transaction.ts # Transaction schema
+
+models/Budget.ts # Budget schema
+
+utils/ # Helper functions
+
+
+
+---
+
+## 🛠️ Setup & Run
+
+1. Clone the repository
+```bash
+git clone (https://github.com/himanshu1009/fin-buddy)
+cd fin-buddy
+```
+Install dependencies
+
+```bash
 npm install
-Configure Environment
-Create .env.local with:
+```
+Configure environment
+Create .env.local:
 
-php-template
-Copy
-Edit
+```bash
 MONGODB_URI=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/<database>?retryWrites=true&w=majority
-Run Development Server
+```
+Run development server
 
-bash
-Copy
-Edit
+```bash
 npm run dev
-App available at http://localhost:3000
+```
+App runs at http://localhost:3000
 
-🎨 UI/UX Notes
-Clean, modern Shadcn UI components
+🎨 UI Notes
+Clean, modern Shadcn UI
 
 Fully responsive grid layout
 
-Dashboard separates forms, charts, and summaries
+Dashboard separates forms, charts, summaries
 
-Interactive charts with Recharts
+Interactive Recharts graphs
 
-Error handling and basic form validation included
+Basic validation and error states
 
-❗ Evaluation Note
-No authentication implemented — As per submission rules.
-Multiple stage submissions allowed.
+⚠️ Evaluation Notes
+No authentication implemented, as per task requirements
 
-🌐 Live Demo
-[Your Deployed URL Here]
-
-📊 Example Screenshots
-(Add screenshots of dashboard, charts, transaction form, etc.)
-
-✔️ Ready for Submission
-Includes:
-✅ GitHub Repo
-✅ Live URL
-✅ Clean, professional README
-
-✨ Optional Improvements
-Dark mode toggle
-
-Improved spending insights
-
-More chart types
+Multiple stage submissions supported
 

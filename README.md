@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💸 Personal Finance Visualizer
 
-## Getting Started
+A responsive web app to track personal finances, manage budgets, and visualize expenses with modern charts.
 
-First, run the development server:
+---
+
+## 🚀 Tech Stack
+
+- **Next.js 15 (App Router)**
+- **React + Shadcn/ui**
+- **MongoDB + Mongoose**
+- **Recharts** for charts
+- **Tailwind CSS** for responsive design
+
+---
+
+## ✨ Features
+
+✅ Add, edit, delete transactions  
+✅ Predefined categories with Pie Chart  
+✅ Monthly expenses bar chart  
+✅ Dashboard summary: total expenses, category breakdown, recent transactions  
+✅ Set monthly budgets & compare with actual spending  
+✅ Simple, clean, responsive UI  
+
+---
+
+## 📂 Project Structure
+
+app/
+
+  ├─ page.tsx # Main dashboard
+
+  └─ api/
+
+  ├─ transactions/route.ts
+
+  └─ budgets/route.ts
+
+
+components/
+
+  ├─ TransactionForm.tsx
+
+  ├─ TransactionList.tsx
+
+  ├─ MonthlyExpensesChart.tsx
+
+  ├─ CategoryPieChart.tsx
+
+  ├─ SummaryCards.tsx
+
+  ├─ BudgetForm.tsx
+
+  └─ BudgetComparisonChart.tsx
+
+
+lib/db.ts # MongoDB connection
+
+models/Transaction.ts # Transaction schema
+
+models/Budget.ts # Budget schema
+
+utils/ # Helper functions
+
+
+
+---
+
+## 🛠️ Setup & Run
+
+1. Clone the repository
+```bash
+git clone (https://github.com/himanshu1009/fin-buddy)
+cd fin-buddy
+```
+Install dependencies
+
+```bash
+npm install
+```
+Configure environment
+Create .env.local:
+
+```bash
+MONGODB_URI=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/<database>?retryWrites=true&w=majority
+```
+Run development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+App runs at http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🎨 UI Notes
+Clean, modern Shadcn UI
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Fully responsive grid layout
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Dashboard separates forms, charts, summaries
 
-## Learn More
+Interactive Recharts graphs
 
-To learn more about Next.js, take a look at the following resources:
+Basic validation and error states
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+⚠️ Evaluation Notes
+No authentication implemented, as per task requirements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Multiple stage submissions supported
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
